@@ -163,10 +163,10 @@ async function get_quiz_data(quiz_Name, current_question) {
  
         let finalScore = +(((appState.current_correct / (appState.current_incorrect + appState.current_correct)) * 100).toFixed(2));
         if (finalScore >= 65) {
-          document.getElementById("endMessage").innerHTML = "Final Score: " + finalScore + "% Congratulations " + userName + " you have passed!" + "<br>To Restart Quiz Refresh Page";
+          document.getElementById("Msg").innerHTML = "Final Score: " + finalScore + "% Congratulations " + userName + " you have passed!" + "<br>To Restart Quiz Refresh Page";
         }
         else {
-          document.getElementById("endMessage").innerHTML = "Final Score: " + finalScore + "%, " + userName + " has failed." + "<br>To Restart Quiz Refresh Page " ;
+          document.getElementById("Msg").innerHTML = "Final Score: " + finalScore + "%, " + userName + " has failed." + "<br>To Restart Quiz Refresh Page " ;
         }
         if (e.target.dataset.action == "{{this.action}}") {
           appState.current_view = "#intro_view";
